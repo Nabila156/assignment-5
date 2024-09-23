@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+        <!-- google font -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+        <!-- tailwind -->
+    
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <style>
+            .lexend {
+                font-family: "Lexend", sans-serif;
+            }
+        </style>
+    
+</head>
+<body>
+    <main>
+        <div class="sticky top-0 backdrop-blur-2xl pb-5">
+            <!-- navbar start -->
+            <nav class="flex justify-between bg-[#F9F7F3] p-5 lg:p-0 lg:px-36 lg:py-12">
+                <div class="hidden lg:block">
+                    <button onclick="home()" class="btn lg:block bg-[#B4F461] text-[#111111] text-xl font-bold">Home</button>
+                </div>
+                <div class="gap-4 lg:flex">
+                    <img src="assets/logo.png" alt="">
+                    <a class="rounded-lg text-[#111111] text-lg lg:text-2xl font-bold">Donate Bangladesh</a>
+                </div>
+                <div class="gap-2 lg:flex">
+                    <img class="size-10" src="assets/coin.png" alt="">
+                    <p class="text-lg lg:text-2xl font-bold mt-2 lg:mt-0 text-stone-500">5500 BDT</p>
+                </div>
+            </nav>
+            <!-- navbar end -->
+
+            <!-- Home button start -->
+
+        <div class="block lg:hidden text-center mt-5 lg:mt-0">
+            <button onclick="home()" class="btn lg:block bg-[#B4F461] text-[#111111] text-xl font-bold">Home</button>
+        </div>   
+
+        <!-- Home button end -->
+        </div>
+
+
+        <!-- FAQ start-->
+
+          <div class="p-5 lg:p-0 lg:px-36 lg:py-12">
+            <div class="flex gap-4 mb-6 lg:mb-12">
+                <p class="font-extrabold text-4xl lg:text-6xl text-[#111111]">Important FAQ</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 lg:size-16">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                </svg>
+            </div>
+              
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the purpose of the donation website?</div>
+                <div class="collapse-content">
+                  <p>The donation website aims to raise funds to provide immediate relief to victims affected by the recent floods and to support individuals injured during the quota movement in Bangladesh. It seeks to ensure that essential resources such as food, medical supplies, and shelter are delivered to those in need.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How can I donate?</div>
+                <div class="collapse-content">
+                  <p>You can donate by visiting our website, where you will find various payment options, including bank transfers, mobile payments, and online payment gateways. Simply select your preferred method, enter the donation amount, and follow the instructions to complete your contribution.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Is my donation tax-deductible?</div>
+                <div class="collapse-content">
+                  <p>Yes, donations made through our website may be tax-deductible, depending on your country's tax laws. We recommend consulting with a tax professional to understand the specifics related to your donation.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How will the funds be used?</div>
+                <div class="collapse-content">
+                  <p>All donations will be allocated transparently to cover essential needs such as food, clean water, medical care, rehabilitation for the injured, and long-term recovery efforts for flood victims. We will provide regular updates on how the funds are being utilized.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium"> Can I volunteer or help in other ways?</div>
+                <div class="collapse-content">
+                  <p>Absolutely! Besides monetary donations, we welcome volunteers to help with fundraising, awareness campaigns, and distribution of relief supplies. You can sign up through our website to get involved in various initiatives supporting affected communities.</p>
+                </div>
+              </div>
+          </div>
+
+        <!-- FAQ end-->
+
+    </main>
+    <script src="js/features.js"></script>
+    <script src="js/utilities.js"></script>
+</body>
+</html>
