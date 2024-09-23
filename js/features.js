@@ -1,9 +1,9 @@
 function blog(){
-    window.location.href = "/assignment-5/blog.html";
+    window.location.href = "../blog.html";
 }
 
 function home(){
-    window.location.href = "/assignment-5/index.html";
+    window.location.href = "../index.html";
 }
 
 
