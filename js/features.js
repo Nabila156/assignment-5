@@ -160,7 +160,7 @@ document.getElementById('quota').addEventListener('click', function(){
     historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
     historyList.innerHTML = `
       
-           <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for The Injured in The Quota Movement in Bangladesh.</p>
+           <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for The Injured in The Quota Movement of Bangladesh.</p>
            <p class="text-base text-slate-500 font-medium">Date : ${localDate}, Time : ${localTime}</p>
 
      `;
