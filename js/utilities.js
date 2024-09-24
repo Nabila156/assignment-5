@@ -13,3 +13,7 @@ function clear(id){
     return clear;
 }
 
+function congrats(){
+    document.getElementById('popup').classList.add('block');
+    document.getElementById('popup').classList.remove('hidden');
+}

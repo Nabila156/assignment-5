@@ -25,6 +25,13 @@ window.addEventListener('scroll', function() {
 
 // donation
 
+// close Confirmation
+
+document.getElementById('closeConfirmation').addEventListener('click', function(){
+    document.getElementById('popup').classList.add('hidden');
+    document.getElementById('showPopup').classList.remove('brightness-[0.5]','backdrop-blur-lg');
+})
+
 // noakhali
 
 document.getElementById('noakhali').addEventListener('click', function(){
@@ -65,6 +72,11 @@ document.getElementById('noakhali').addEventListener('click', function(){
 
      const historyContainer = document.getElementById('history');
      historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+     congrats();
+
+
+     document.getElementById('showPopup').classList.add('brightness-[0.5]', 'backdrop-blur-lg');
 })
 
 
@@ -107,6 +119,11 @@ document.getElementById('feni').addEventListener('click', function(){
 
      const historyContainer = document.getElementById('history');
      historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+     congrats();
+
+
+     document.getElementById('showPopup').classList.add('brightness-[0.5]', 'backdrop-blur-lg');
 })
 
 
@@ -150,6 +167,10 @@ document.getElementById('quota').addEventListener('click', function(){
 
      const historyContainer = document.getElementById('history');
      historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+     congrats();
+
+     document.getElementById('showPopup').classList.add('brightness-[0.5]', 'backdrop-blur-lg');
 })
 
 
