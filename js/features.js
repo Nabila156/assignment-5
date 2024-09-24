@@ -8,11 +8,6 @@ function home(){
     window.location.href = "./index.html";
 }
 
-function history(){
-    window.location.href = "./history.html";
-}
-
-
 
 // blur
 
@@ -33,7 +28,6 @@ window.addEventListener('scroll', function() {
 // noakhali
 
 document.getElementById('noakhali').addEventListener('click', function(){
-
     donationInput = document.getElementById('noakhaliDonation').value;
     const containsLetters = /[a-zA-Z]/.test(donationInput);
 
@@ -54,6 +48,23 @@ document.getElementById('noakhali').addEventListener('click', function(){
     
     clear('noakhaliDonation');
     document.getElementById('myBalance').innerText = myNewBalance;
+
+    document.getElementById('my_modal_1');
+
+
+    let localTime = new Date().toLocaleTimeString();
+    let localDate = new Date().toLocaleDateString();
+    const historyList = document.createElement('div');
+    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.innerHTML = `
+      
+           <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for Flood Relief in Noakhali, Bangladesh.</p>
+           <p class="text-base text-slate-500 font-medium">Date : ${localDate}, Time : ${localTime}</p>
+
+     `;
+
+     const historyContainer = document.getElementById('history');
+     historyContainer.insertBefore(historyList, historyContainer.firstChild);
 })
 
 
@@ -81,6 +92,21 @@ document.getElementById('feni').addEventListener('click', function(){
     
     clear('feniDonation');
     document.getElementById('myBalance').innerText = myNewBalance;
+
+
+    let localTime = new Date().toLocaleTimeString();
+    let localDate = new Date().toLocaleDateString();
+    const historyList = document.createElement('div');
+    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.innerHTML = `
+      
+           <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for Flood Relief in Feni, Bangladesh.</p>
+           <p class="text-base text-slate-500 font-medium">Date : ${localDate}, Time : ${localTime}</p>
+
+     `;
+
+     const historyContainer = document.getElementById('history');
+     historyContainer.insertBefore(historyList, historyContainer.firstChild);
 })
 
 
@@ -109,6 +135,47 @@ document.getElementById('quota').addEventListener('click', function(){
     
     clear('quotaDonation');
     document.getElementById('myBalance').innerText = myNewBalance;
+
+
+    let localTime = new Date().toLocaleTimeString();
+    let localDate = new Date().toLocaleDateString();
+    const historyList = document.createElement('div');
+    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.innerHTML = `
+      
+           <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for The Injured in The Quota Movement in Bangladesh.</p>
+           <p class="text-base text-slate-500 font-medium">Date : ${localDate}, Time : ${localTime}</p>
+
+     `;
+
+     const historyContainer = document.getElementById('history');
+     historyContainer.insertBefore(historyList, historyContainer.firstChild);
 })
 
 
+// donation & history buttons
+
+document.getElementById('btnDonation').addEventListener('click', function(){
+    document.getElementById('btnDonation').classList.add('bg-[#B4F461]');
+    document.getElementById('btnDonation').classList.remove('bg-white', 'border-slate-300');
+    document.getElementById('btnHistory').classList.remove('bg-[#B4F461]');
+    document.getElementById('btnHistory').classList.add('bg-white', 'border-slate-300');
+})
+document.getElementById('btnHistory').addEventListener('click', function(){
+    document.getElementById('btnHistory').classList.add('bg-[#B4F461]');
+    document.getElementById('btnHistory').classList.remove('bg-white', 'border-slate-300');
+    document.getElementById('btnDonation').classList.add('bg-white', 'border-slate-300');
+    document.getElementById('btnDonation').classList.remove('bg-[#B4F461]');
+})
+
+// history
+
+
+document.getElementById('btnHistory').addEventListener('click', function(){
+       document.getElementById('history').classList.remove('hidden')
+       document.getElementById('home').classList.add('hidden');
+})
+document.getElementById('btnDonation').addEventListener('click', function(){
+       document.getElementById('history').classList.add('hidden')
+       document.getElementById('home').classList.remove('hidden');
+})

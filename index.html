@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,8 +45,8 @@
 
         <!-- button start -->
             <div class="pt-8 flex justify-center gap-3">
-                <button onclick="home()" id="btnDonation" class="btn rounded-lg bg-[#B4F461] text-[#111111] text-xl font-bold">Donation</button>
-                <button onclick="history()" id="btnHistory" class="btn bg-white border-slate-300 rounded-lg text-[#111111] text-xl font-bold">History</button>
+                <button id="btnDonation" class="btn rounded-lg bg-[#B4F461] text-[#111111] text-xl font-bold">Donation</button>
+                <button id="btnHistory" class="btn bg-white border-slate-300 rounded-lg text-[#111111] text-xl font-bold">History</button>
             </div>
             <div class="block lg:hidden text-center mt-5">
                 <button onclick="blog()" class="btn lg:block bg-white border-slate-300 text-[#111111] text-xl font-bold">Blog</button>
@@ -54,7 +54,8 @@
         <!-- button end -->
     </div>
 
-        <!-- card 1 start -->
+        <div id="home">
+            <!-- card 1 start -->
         <div class="mx-5 lg:mx-36 mt-20 rounded-xl border">
             <div class="lg:flex gap-10 p-4 lg:p-[32px]">
             
@@ -73,7 +74,7 @@
                       <p class="pb-3 text-slate-500 text-base font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                       <input id="noakhaliDonation" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                       <div class="pt-4">
-                        <button id="noakhali" class="btn rounded-lg bg-[#B4F461] w-full text-[#111111] text-xl font-bold">Donate Now</button>
+                          <button id="noakhali" class="btn rounded-lg bg-[#B4F461] w-full text-[#111111] text-xl font-bold">Donate Now</button>
                       </div>
                     </div>
                 </div>
@@ -135,6 +136,16 @@
             </div>
         </div>
         <!-- card 3 end -->
+
+        </div>
+
+       <!-- history -->
+
+       <div id="history" class="hidden">
+           
+       </div>
+
+
     </main>
     <script src="js/features.js"></script>
     <script src="js/utilities.js"></script>

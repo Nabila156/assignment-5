@@ -12,3 +12,4 @@ function clear(id){
     const clear = document.getElementById(id).value= '';
     return clear;
 }
+
