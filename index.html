@@ -45,8 +45,8 @@
 
         <!-- button start -->
             <div class="pt-8 flex justify-center gap-3">
-                <button id="btnDonation" class="btn rounded-lg bg-[#B4F461] text-[#111111] text-xl font-bold">Donation</button>
-                <button id="btnHistory" class="btn bg-white border-slate-300 rounded-lg text-[#111111] text-xl font-bold">History</button>
+                <button onclick="home()" id="btnDonation" class="btn rounded-lg bg-[#B4F461] text-[#111111] text-xl font-bold">Donation</button>
+                <button onclick="history()" id="btnHistory" class="btn bg-white border-slate-300 rounded-lg text-[#111111] text-xl font-bold">History</button>
             </div>
             <div class="block lg:hidden text-center mt-5">
                 <button onclick="blog()" class="btn lg:block bg-[#B4F461] text-[#111111] text-xl font-bold">Blog</button>
@@ -66,7 +66,7 @@
                 <div  class="lg:w-[50%]">
                     <div class="mt-8 lg:mt-0 gap-2 flex justify-center bg-[#F9F7F3] p-2 rounded-xl">
                         <img class="size-6" src="assets/coin.png" alt="">
-                        <p><span id="addNDonation">0</span> BDT</p>
+                        <p><span id="totalDonationN">0</span> BDT</p>
                     </div>
                     <div>
                       <h2 class="pt-3 pb-2 text-xl text-[#111111] font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -93,7 +93,7 @@
                 <div  class="lg:w-[50%]">
                     <div class="mt-8 lg:mt-0 gap-2 flex justify-center bg-[#F9F7F3] p-2 rounded-xl">
                         <img class="size-6" src="assets/coin.png" alt="">
-                        <p>600 BDT</p>
+                        <p id="totalDonationF">600 BDT</p>
                     </div>
                     <div>
                       <h2 class="pt-3 pb-2 text-xl text-[#111111] font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -120,7 +120,7 @@
                 <div  class="lg:w-[50%]">
                     <div class="mt-8 lg:mt-0 gap-2 flex justify-center bg-[#F9F7F3] p-2 rounded-xl">
                         <img class="size-6" src="assets/coin.png" alt="">
-                        <p>2400 BDT</p>
+                        <p id="totalDonationQ">2400 BDT</p>
                     </div>
                     <div>
                       <h2 class="pt-3 pb-2 text-xl text-[#111111] font-bold">Aid for Injured in the Quota Movement</h2>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+
+       <!-- google font -->
+
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   
+       <!-- tailwind -->
+   
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+   
+       <style>
+           .lexend {
+               font-family: "Lexend", sans-serif;
+           }
+       </style>
+
+</head>
+<body>
+    <main>
+        <div class="lg:sticky top-0 backdrop-blur-2xl pb-5">
+            <!-- navbar start -->
+            <nav id="blur" class="flex justify-between bg-[#F9F7F3] p-5 lg:p-0 lg:px-36 lg:py-6">
+                <div class="hidden lg:block">
+                    <button onclick="blog()" class="btn lg:block bg-[#B4F461] text-[#111111] text-xl font-bold">Blog</button>
+                </div>
+                <div class="gap-4 lg:flex">
+                    <img src="assets/logo.png" alt="">
+                    <a class="rounded-lg text-[#111111] text-lg lg:text-2xl font-bold">Donate Bangladesh</a>
+                </div>
+                <div class="gap-2 lg:flex">
+                    <img class="size-10" src="assets/coin.png" alt="">
+                    <p class="text-lg lg:text-2xl font-bold mt-2 lg:mt-0 text-stone-500"><span id="myBalance">5500</span> BDT</p>
+                </div>
+            </nav>
+            <!-- navbar end -->
+    
+            <!-- button start -->
+                <div class="pt-8 flex justify-center gap-3">
+                    <button onclick="home()" id="btnDonation" class="btn rounded-lg bg-[#B4F461] text-[#111111] text-xl font-bold">Donation</button>
+                    <button onclick="history()" id="btnHistory" class="btn bg-white border-slate-300 rounded-lg text-[#111111] text-xl font-bold">History</button>
+                </div>
+                <div class="block lg:hidden text-center mt-5">
+                    <button onclick="blog()" class="btn lg:block bg-[#B4F461] text-[#111111] text-xl font-bold">Blog</button>
+                </div>
+            <!-- button end -->
+        </div>
+    </main>
+    <script src="js/features.js"></script>
+    <script src="js/utilities.js"></script>
+</body>
+</html>

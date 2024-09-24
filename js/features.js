@@ -8,6 +8,9 @@ function home(){
     window.location.href = "./index.html";
 }
 
+function history(){
+    window.location.href = "./history.html";
+}
 
 // blur
 
@@ -44,23 +47,82 @@ document.getElementById('btnHistory').addEventListener('click', function(){
 
 
 
+// noakhali
 
 document.getElementById('noakhali').addEventListener('click', function(){
 
+    donationInput = document.getElementById('noakhaliDonation').value;
+    const containsLetters = /[a-zA-Z]/.test(donationInput);
+
     const amount = donation('noakhaliDonation');
-    const addNDonation = parseFloat(document.getElementById('addNDonation').innerText);
-    const sum = amount + addNDonation;
-    const newBalance = sum.toFixed(2);
-    const myBalance = parseFloat(document.getElementById('myBalance').innerText);
+    const totalDonationN = totalDonationAndMyBalance('totalDonationN');
+    const myBalance = totalDonationAndMyBalance('myBalance');
+    const sum = amount + totalDonationN;
+    const newBalance = parseFloat(sum.toFixed(2));
     const myNewBalance = myBalance - amount;
-   
-    if(isNaN(newBalance) || amount<=0){
-        alert('Failed to donate.');
+    
+    if(isNaN(amount) || amount<=0 || amount>myBalance || containsLetters){
+        alert('Failed to donate. Please enter a valid amount.');
+        return;
     }
     else{
-        document.getElementById('addNDonation').innerText = newBalance;
+        document.getElementById('totalDonationN').innerText = newBalance;
     }
     
-    document.getElementById('noakhaliDonation').value= '';
+    clear('noakhaliDonation');
     document.getElementById('myBalance').innerText = myNewBalance;
 })
+
+
+// feni
+
+document.getElementById('feni').addEventListener('click', function(){
+
+    donationInput = document.getElementById('feniDonation').value;
+    const containsLetters = /[a-zA-Z]/.test(donationInput);
+
+    const amount = donation('feniDonation');
+    const totalDonationF = totalDonationAndMyBalance('totalDonationF');
+    const myBalance = totalDonationAndMyBalance('myBalance');
+    const sum = amount + totalDonationF;
+    const newBalance = parseFloat(sum.toFixed(2));
+    const myNewBalance = myBalance - amount;
+    
+    if(isNaN(amount) || amount<=0 || amount>myBalance || containsLetters){
+        alert('Failed to donate. Please enter a valid amount.');
+        return;
+    }
+    else{
+        document.getElementById('totalDonationF').innerText = newBalance;
+    }
+    
+    clear('feniDonation');
+    document.getElementById('myBalance').innerText = myNewBalance;
+})
+
+
+
+// quota movement
+
+document.getElementById('quota').addEventListener('click', function(){
+
+    const amount = donation('quotaDonation');
+    const totalDonationQ = totalDonationAndMyBalance('totalDonationQ');
+    const sum = amount + totalDonationQ;
+    const newBalance = parseFloat(sum.toFixed(2));
+    const myBalance = totalDonationAndMyBalance('myBalance');
+    const myNewBalance = myBalance - amount;
+   
+    if(isNaN(newBalance) || amount<=0 || amount>myBalance){
+        alert('Failed to donate. Please enter a valid amount.');
+        return;
+    }
+    else{
+        document.getElementById('totalDonationQ').innerText = newBalance;
+    }
+    
+    clear('quotaDonation');
+    document.getElementById('myBalance').innerText = myNewBalance;
+})
+
+
