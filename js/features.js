@@ -12,6 +12,8 @@ function history(){
     window.location.href = "./history.html";
 }
 
+
+
 // blur
 
 window.addEventListener('scroll', function() {
@@ -27,25 +29,6 @@ window.addEventListener('scroll', function() {
 
 
 // donation
-
-document.getElementById('btnDonation').addEventListener('click', function(){
-      document.getElementById('btnDonation').classList.add('bg-[#B4F461]');
-      document.getElementById('btnDonation').classList.remove('bg-white');
-      document.getElementById('btnDonation').classList.remove('border-slate-300');
-      document.getElementById('btnHistory').classList.add('bg-white');
-      document.getElementById('btnHistory').classList.add('border-slate-300');
-})
-
-document.getElementById('btnHistory').addEventListener('click', function(){
-      document.getElementById('btnHistory').classList.add('bg-[#B4F461]');
-      document.getElementById('btnHistory').classList.remove('bg-white');
-      document.getElementById('btnHistory').classList.remove('border-slate-300');
-      document.getElementById('btnDonation').classList.add('border-slate-300');
-      document.getElementById('btnDonation').classList.remove('bg-[#B4F461]');
-      document.getElementById('btnDonation').classList.add('bg-white');
-})
-
-
 
 // noakhali
 
@@ -106,14 +89,17 @@ document.getElementById('feni').addEventListener('click', function(){
 
 document.getElementById('quota').addEventListener('click', function(){
 
+    donationInput = document.getElementById('quotaDonation').value;
+    const containsLetters = /[a-zA-Z]/.test(donationInput);
+
     const amount = donation('quotaDonation');
     const totalDonationQ = totalDonationAndMyBalance('totalDonationQ');
+    const myBalance = totalDonationAndMyBalance('myBalance');
     const sum = amount + totalDonationQ;
     const newBalance = parseFloat(sum.toFixed(2));
-    const myBalance = totalDonationAndMyBalance('myBalance');
     const myNewBalance = myBalance - amount;
-   
-    if(isNaN(newBalance) || amount<=0 || amount>myBalance){
+    
+    if(isNaN(amount) || amount<=0 || amount>myBalance || containsLetters){
         alert('Failed to donate. Please enter a valid amount.');
         return;
     }
