@@ -62,7 +62,7 @@ document.getElementById('noakhali').addEventListener('click', function(){
     let localTime = new Date().toLocaleTimeString();
     let localDate = new Date().toLocaleDateString();
     const historyList = document.createElement('div');
-    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.className = "bg-white p-5 rounded-xl border w-[70%] m-auto mb-6"
     historyList.innerHTML = `
       
            <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for Flood Relief in Noakhali, Bangladesh.</p>
@@ -109,7 +109,7 @@ document.getElementById('feni').addEventListener('click', function(){
     let localTime = new Date().toLocaleTimeString();
     let localDate = new Date().toLocaleDateString();
     const historyList = document.createElement('div');
-    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.className = "bg-white p-5 rounded-xl border w-[70%] m-auto mb-6"
     historyList.innerHTML = `
       
            <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for Flood Relief in Feni, Bangladesh.</p>
@@ -157,7 +157,7 @@ document.getElementById('quota').addEventListener('click', function(){
     let localTime = new Date().toLocaleTimeString();
     let localDate = new Date().toLocaleDateString();
     const historyList = document.createElement('div');
-    historyList.className = "bg-white p-5 rounded-lg border w-[70%] m-auto mb-6"
+    historyList.className = "bg-white p-5 rounded-xl border w-[70%] m-auto mb-6"
     historyList.innerHTML = `
       
            <p class="text-xl text-[#111111] font-bold">${amount} Taka has been Donated for The Injured in The Quota Movement of Bangladesh.</p>
