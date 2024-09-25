@@ -59,8 +59,6 @@ document.getElementById('noakhali').addEventListener('click', function(){
     clear('noakhaliDonation');
     document.getElementById('myBalance').innerText = myNewBalance;
 
-    document.getElementById('my_modal_1');
-
 
     let localTime = new Date().toLocaleTimeString();
     let localDate = new Date().toLocaleDateString();
