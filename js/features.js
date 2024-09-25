@@ -29,6 +29,7 @@ window.addEventListener('scroll', function() {
 // close Confirmation
 
 document.getElementById('closeConfirmation').addEventListener('click', function(){
+
     document.getElementById('popup').classList.add('hidden');
     document.getElementById('showPopup').classList.remove('brightness-[0.5]','backdrop-blur-lg');
 });
@@ -36,6 +37,7 @@ document.getElementById('closeConfirmation').addEventListener('click', function(
 // noakhali
 
 document.getElementById('noakhali').addEventListener('click', function(){
+    
     donationInput = document.getElementById('noakhaliDonation').value;
     const containsLetters = /[a-zA-Z]/.test(donationInput);
 
@@ -132,7 +134,7 @@ document.getElementById('feni').addEventListener('click', function(){
 // quota movement
 
 document.getElementById('quota').addEventListener('click', function(){
-
+    
     donationInput = document.getElementById('quotaDonation').value;
     const containsLetters = /[a-zA-Z]/.test(donationInput);
 
@@ -178,12 +180,14 @@ document.getElementById('quota').addEventListener('click', function(){
 // donation & history buttons
 
 document.getElementById('btnDonation').addEventListener('click', function(){
+    
     document.getElementById('btnDonation').classList.add('bg-[#B4F461]');
     document.getElementById('btnDonation').classList.remove('bg-white', 'border-slate-300');
     document.getElementById('btnHistory').classList.remove('bg-[#B4F461]');
     document.getElementById('btnHistory').classList.add('bg-white', 'border-slate-300');
 });
 document.getElementById('btnHistory').addEventListener('click', function(){
+   
     document.getElementById('btnHistory').classList.add('bg-[#B4F461]');
     document.getElementById('btnHistory').classList.remove('bg-white', 'border-slate-300');
     document.getElementById('btnDonation').classList.add('bg-white', 'border-slate-300');
